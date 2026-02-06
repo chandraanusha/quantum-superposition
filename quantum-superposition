@@ -1,0 +1,9 @@
+from qiskit_ibm_runtime import QiskitRuntimeService
+
+service = QiskitRuntimeService(
+    channel='ibm_quantum_platform',
+    instance='crn:v1:bluemix:public:quantum-computing:us-east:a/3d792fd5e9904e9d8748a0a9c0ac84d8:3e038b9e-16f5-47f7-a89e-cf1f8d361da0::'
+)
+job = service.job('d62ug4ao8gvs73f2mgsg')
+job_result = job.result()
+
